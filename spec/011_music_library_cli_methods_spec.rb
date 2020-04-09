@@ -190,3 +190,4 @@ describe "MusicLibraryController - CLI Methods" do
     end
   end
 end
+  
