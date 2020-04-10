@@ -1,6 +1,6 @@
-require_relative "./concerns/findable.rb"
+require_relative "./concerns/findable.rb" #Allows us to use our Findable module
 class Genre
-   extend Concerns::Findable
+   extend Concerns::Findable #Allows us to use our Findable module (extend for class methods / include for instance methods)
    attr_accessor :name, :songs
    @@all = []
    

@@ -1,6 +1,7 @@
-require_relative "./concerns/findable.rb"
+require_relative "./concerns/findable.rb" #Allows us to use our Findable module
 class Artist
-   extend Concerns::Findable
+   extend Concerns::Findable #Allows us to use our Findable module (extend for class methods / include for instance methods)
+
    attr_accessor :name, :songs
    @@all = []
    
@@ -27,7 +28,9 @@ class Artist
    end
 
    def add_song(song)
+      #Add to artist songs unless it already exists
       songs << song unless songs.include?(song)
+      #Add self to song.artist unless it already has an artist value
       song.artist = self unless song.artist
    end
 
