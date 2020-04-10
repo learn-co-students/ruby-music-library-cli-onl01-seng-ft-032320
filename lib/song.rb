@@ -1,7 +1,6 @@
 class Song 
   
-  attr_accessor :name, :genre 
-  attr_reader :artist 
+  attr_accessor :name, :genre, :artist 
   
   @@all = []
   
@@ -10,7 +9,6 @@ class Song
     # binding.pry
     self.artist=(artist) if artist
     self.genre=genre if genre
-    # @genre = genre 
     
     @@all << self
   end
@@ -24,6 +22,13 @@ class Song
     # artist.songs << self if !artist.songs.include?(self)
     @artist = artist if !@artist
     artist.add_song(self)
+  end
+  
+   def genre=(genre)
+    @genre = genre
+    if !(genre.songs.include?(self))
+      genre.songs << self
+    end
   end
   
   # Class Methods

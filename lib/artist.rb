@@ -15,9 +15,12 @@ class Artist
   end
   
   def add_song(song)
-    # binding.pry 
     song.artist = self unless song.artist
     songs << song unless songs.include?(song)
+  end
+  
+  def genres 
+    songs.collect { |song| song.genre}.uniq
   end
   
   # Class Methods
