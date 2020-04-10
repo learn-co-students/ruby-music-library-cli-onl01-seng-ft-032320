@@ -15,7 +15,7 @@ describe "Associations — Song and Artist:" do
     describe "#songs" do
       it "returns the artist's 'songs' collection (artist has many songs)" do
         expect(artist.songs).to eq([])
-
+          # binding.pry 
         artist.songs << song
 
         expect(artist.songs).to include(song)
