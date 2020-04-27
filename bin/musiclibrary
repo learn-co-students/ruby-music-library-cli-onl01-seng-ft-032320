@@ -1,5 +1,8 @@
 #!/usr/bin/env ruby
+#Allows computer to know tha this is a ruby file
 
+#Gives this file information from environment regarding gems/files/etc
 require_relative '../config/environment'
 
+#Launches CLI flow
 MusicLibraryController.new.call
